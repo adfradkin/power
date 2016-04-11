@@ -16,16 +16,21 @@ def float_input(prompt):
 	return userNumber
 
 def power(number, expNum):
-	#"""Converts a 2 inputs into a base and an exponent without use in **"""
-	ogNum = number
-	while expNum != 1:
-	
-		number *= ogNum
-		expNum -= 1
-	return number
+	"""Converts a 2 inputs into a base and an exponent without use in **"""
 
-	
-expNum = float_input("Choose a value for your exponent. ")
+	if expNum == 0:
+		return 1
+		
+	elif expNum == 1:
+		return number
+		
+	else:
+		expNum-=1
+		number*=power(number, expNum)
+		return number
+		
+
 value = float_input("Choose a number for your base. ")
-answer = power(value, expNum)
-print ("{} to the power of {} is {}".format(value, expNum, answer))
+expo = float_input("Choose a value for your exponent. ")		
+answer = power(value, expo)
+print ("{} to the power of {} is {}".format(value, expo, answer))
