@@ -14,15 +14,12 @@ def float_input(prompt):
 			finalNumber = userNumber
 	
 	return userNumber
-
 def power(number, expNum):
+
 	"""Converts a 2 inputs into a base and an exponent without use in **"""
 
 	if expNum == 0:
 		return 1
-		
-	elif expNum == 1:
-		return number
 		
 	else:
 		expNum-=1
